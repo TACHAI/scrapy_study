@@ -23,5 +23,5 @@ class ScrapyStudyPipeline(object):
 class ScrapyStudyPipeline1(object):
     def process_item(self, item, spider):
         if item["come_from"]=="book":
-            print("pipe"+item["book_name"])
+           print("pipe"+item["book_name"])
         return item

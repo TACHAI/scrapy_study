@@ -4021,3 +4021,432 @@ Traceback (most recent call last):
   File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 14, in parse
     print("nextPage" + next_url)
 TypeError: can only concatenate str (not "NoneType") to str
+2020-03-14 17:49:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 21, in parse
+    next_url = soup.find('a', id='nextPage')['href']
+  File "/usr/local/lib/python3.7/site-packages/bs4/element.py", line 1016, in __getitem__
+    return self.attrs[key]
+KeyError: 'href'
+2020-03-14 17:50:18 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-03-14 17:50:18 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "/usr/local/lib/python3.7/site-packages/scrapy/crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/core/engine.py", line 70, in __init__
+    self.scraper = Scraper(crawler)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/core/scraper.py", line 71, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/middleware.py", line 53, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/middleware.py", line 34, in from_settings
+    mwcls = load_object(clspath)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "/usr/local/Cellar/python/3.7.1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/pipelines.py", line 27
+    return item
+         ^
+IndentationError: expected an indented block
+2020-03-14 17:50:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 21, in parse
+    next_url = soup.find('a', id='nextPage')['href']
+  File "/usr/local/lib/python3.7/site-packages/bs4/element.py", line 1016, in __getitem__
+    return self.attrs[key]
+KeyError: 'href'
+2020-03-14 17:50:54 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 22, in parse
+    next_url = soup.find('a', id='nextPage')['href']
+  File "/usr/local/lib/python3.7/site-packages/bs4/element.py", line 1016, in __getitem__
+    return self.attrs[key]
+KeyError: 'href'
+2020-03-14 17:54:30 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "Selector") to str
+2020-03-14 17:54:47 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 17:55:09 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 17:56:37 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:11:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:12:25 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:20:47 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:21:35 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 24, in parse
+    print("next_url:"+next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:21:54 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 14, in parse
+    print("next_url:" + next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:40:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 28, in parse
+    next_url = "https://list.suning.com" + next_url
+TypeError: can only concatenate str (not "Tag") to str
+2020-03-14 18:40:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 28, in parse
+    next_url = "https://list.suning.com" + next_url
+TypeError: can only concatenate str (not "Tag") to str
+2020-03-14 18:49:45 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 27, in parse
+    print("next_url:" + next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:53:54 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 28, in parse
+    print("next_url:" + next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:56:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 28, in parse
+    print("next_url:" + next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:57:22 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 32, in parse
+    callback=self.parse()
+TypeError: parse() missing 1 required positional argument: 'response'
+2020-03-14 18:57:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 27, in parse
+    print("next_url:" + next_url)
+TypeError: can only concatenate str (not "Selector") to str
+2020-03-14 18:58:11 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 27, in parse
+    print("next_url:" + next_url)
+TypeError: can only concatenate str (not "Selector") to str
+2020-03-14 18:58:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 29, in parse
+    print("next_url:" + url)
+TypeError: can only concatenate str (not "Selector") to str
+2020-03-14 18:59:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 29, in parse
+    print("next_url:" + url)
+TypeError: can only concatenate str (not "Selector") to str
+2020-03-14 18:59:20 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 27, in parse
+    print("next_url:" + next_url)
+TypeError: can only concatenate str (not "SelectorList") to str
+2020-03-14 18:59:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 32, in parse
+    callback=self.parse()
+TypeError: parse() missing 1 required positional argument: 'response'
+2020-03-14 19:02:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 32, in parse
+    callback=self.parse()
+TypeError: parse() missing 1 required positional argument: 'response'
+2020-03-14 19:04:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502308-0.html> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/mac/Desktop/pyCharm/Scrapy-study/scrapy_study/scrapy_study/spiders/book.py", line 33, in parse
+    callback=self.parse()
+TypeError: parse() missing 1 required positional argument: 'response'
