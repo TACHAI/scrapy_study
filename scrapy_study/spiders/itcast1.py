@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import scrapy
+import logging
 
+logger = logging.getLogger(__name__)
 
 class Itcast1Spider(scrapy.Spider):
     name = 'itcast1'
@@ -8,4 +10,6 @@ class Itcast1Spider(scrapy.Spider):
     start_urls = ['http://itcast.cn/']
 
     def parse(self, response):
+        for i in range(20):
+            logger.warning("itcat")
         pass

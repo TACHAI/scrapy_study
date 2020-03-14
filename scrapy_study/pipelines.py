@@ -4,7 +4,9 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+import logging
 
+logger = logging.getLogger(__name__)
 
 class ScrapyStudyPipeline(object):
     def process_item(self, item, spider):
@@ -14,12 +16,12 @@ class ScrapyStudyPipeline(object):
         # spider.name == "itcast"
         if item["come_from"]=="itcast":
             print(item)
-
+            logger.warning(item["come_from"])
         return item
 
 
 class ScrapyStudyPipeline1(object):
     def process_item(self, item, spider):
-        # TODO
-        print(item)
+        if item["come_from"]=="book":
+            print("pipe"+item["book_name"])
         return item
